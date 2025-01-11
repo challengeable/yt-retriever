@@ -29,6 +29,12 @@ export default defineManifest({
       js: ['src/contentScript/index.ts', 'src/contentScript/[playlist].ts'],
       run_at: 'document_end'
     },
+    // Watching from a playlist
+    {
+      matches: ['https://www.youtube.com/watch?v=*&list=*'],
+      js: ['src/contentScript/[watching].ts'],
+      run_at: 'document_start'
+    },
   ],
   web_accessible_resources: [
     {
