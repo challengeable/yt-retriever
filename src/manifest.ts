@@ -42,6 +42,6 @@ export default defineManifest({
       matches: [],
     },
   ],
-  permissions: ['tabs', 'storage', 'activeTab', 'webRequest'],
-  host_permissions: ["*://*/*"],
+  permissions: ['tabs', 'storage', 'webRequest'],
+  host_permissions: ["https://www.youtube.com/*"],
 })
