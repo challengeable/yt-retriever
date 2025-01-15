@@ -11,9 +11,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "yarn clear-builds && tsc && vite build && zip -r build.zip build",
     "preview": "vite preview",
-    "fmt": "prettier --write '**/*.{tsx,ts,json,css,scss,md}'"
+    "fmt": "prettier --write '**/*.{tsx,ts,json,css,scss,md}'",
+    "clear-builds": "rm -rf -d build build.zip"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
